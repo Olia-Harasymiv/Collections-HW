@@ -1,39 +1,42 @@
 package main.java.models;
 
-import java.time.LocalDate;
 import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
         //Set Task
         System.out.println("This is a 'Set' task: \n");
-        UserSet userSet1 = new UserSet(27, "HarryP");
-        UserSet userSet2 = new UserSet(22, "RonW");
-        UserSet userSet3 = new UserSet(28, "HermioneG");
+        User user1 = new User(27, "HarryP");
+        User user2 = new User(22, "RonW");
+        User user3 = new User(28, "HermioneG");
 
-        Set<UserSet> userSetHashSet = new HashSet<>();
-        userSetHashSet.add(userSet1);
-        userSetHashSet.add(userSet2);
-        userSetHashSet.add(userSet3);
-        System.out.println(userSetHashSet);
+        Set<User> userSetHash = new HashSet<>();
+        userSetHash.add(user1);
+        userSetHash.add(user2);
+        userSetHash.add(user3);
+        System.out.println(userSetHash);
 
-        Set<UserSet> userSetTreeSet = new TreeSet<>();
-        userSetTreeSet.add(userSet1);
-        userSetTreeSet.add(userSet2);
-        userSetTreeSet.add(userSet3);
-        System.out.println(userSetTreeSet);
+        Set<User> userSetTree = new TreeSet<>();
+        userSetTree.add(user1);
+        userSetTree.add(user2);
+        userSetTree.add(user3);
+        System.out.println(userSetTree);
 
 
         //Map task
         System.out.println("\n  \n This is a 'Map' task: \n");
-        MapPerson mapPerson1 = new MapPerson(905, "harry@gmail.com");
-        MapPerson mapPerson2 = new MapPerson(605, "ron@gmail.com");
-        MapPerson mapPerson3 = new MapPerson(808, "hermione@gmail.com");
-        Map<Integer, MapPerson> map = new HashMap<>();
-        map.put(1, mapPerson1);
-        map.put(2, mapPerson2);
-        map.put(3, mapPerson3);
-        System.out.println(map);
+
+
+        Person person1 = new Person(905, "harry@gmail.com");
+        Person person2 = new Person(605, "ron@gmail.com");
+        Person person3 = new Person(808, "hermione@gmail.com");
+        Map<Integer, Person> map = new HashMap<>();
+        map.put(1, person1);
+        map.put(2, person2);
+        map.put(3, person3);
+        System.out.println("All users:" + " "  + map);
+        map.remove(2);
+        System.out.println(map.get(2) + " - " + "User 2 is deleted");
 
         //Task a - List
         System.out.println("\n \n This is Task a -List");
