@@ -36,7 +36,7 @@ public class Main {
         map.put(3, person3);
         System.out.println("All users:" + " "  + map);
         map.remove(2);
-        System.out.println(map.get(2) + " - " + "User 2 is deleted");
+        System.out.println(map.get(2) + " - " + "User is deleted");
 
         //Task a - List
         System.out.println("\n \n This is Task a -List");
